@@ -16,11 +16,11 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'epmatsw/ag.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'kamykn/dark-theme.vim'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 syntax on
-colorscheme darktheme 
+autocmd vimenter * ++nested colorscheme gruvbox   
 
 " Automatically open NERDTree when nvim opens
 autocmd VimEnter * NERDTree | wincmd p
@@ -51,5 +51,5 @@ set expandtab     " <Tab> inserts spaces, not '\t'
 
 " Update time faster (default is 4000ms)
 set updatetime=100
-
-
+ 
+ 
