@@ -8,14 +8,14 @@ nnoremap <leader>n :NERDTreeFind<CR>
 
 " Plugins
 call plug#begin()
-Plug 'roxma/nvim-completion-manager' 
+" Plug 'roxma/nvim-completion-manager' 
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'epmatsw/ag.vim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'morhetz/gruvbox'
 call plug#end()
 
