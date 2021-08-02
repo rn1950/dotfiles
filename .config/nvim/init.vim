@@ -1,10 +1,11 @@
-let mapleader = " " 
+let mapleader = " "
 " Remap the leader + f to open FZF
 nnoremap <leader>m :FZF<CR>
 nnoremap <leader>s yiw:Ag <C-r>0<CR>
 nnoremap <leader>qq :q!<CR>
 nnoremap <leader>w :wq<CR>
 nnoremap <leader>n :NERDTreeFind<CR>
+nnoremap <leader>r :Ranger<CR>
 
 " Plugins
 call plug#begin()
@@ -16,11 +17,13 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'epmatsw/ag.vim'
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'vim-airline/vim-airline'
 Plug 'morhetz/gruvbox'
 call plug#end()
 
 syntax on
-autocmd vimenter * ++nested colorscheme gruvbox   
+let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox   
 
 " Automatically open NERDTree when nvim opens
 autocmd VimEnter * NERDTree | wincmd p
