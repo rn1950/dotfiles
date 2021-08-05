@@ -10,6 +10,11 @@ nnoremap <leader>0 <C-w>k
 nnoremap <leader>l <C-w>j
 nnoremap <leader>p <C-w>l
 nnoremap <leader>o <C-w>h
+nnoremap <leader>u :bp<CR>
+nnoremap <leader>i :bn<CR>
+nnoremap <leader>j :bp<bar>sp<bar>bn<bar>bd<CR>
+
+autocmd VimEnter * e ~/dotfiles/trynaGoFast.txt 
 
 " Plugins
 call plug#begin()
@@ -23,6 +28,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'epmatsw/ag.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'vim-airline/vim-airline'
+Plug 'bling/vim-bufferline'
 Plug 'morhetz/gruvbox'
 " Plug 'neovim/nvim-lspconfig'
 call plug#end()
