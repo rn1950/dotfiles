@@ -29,13 +29,18 @@ Plug 'epmatsw/ag.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'vim-airline/vim-airline'
 Plug 'bling/vim-bufferline'
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
 " Plug 'neovim/nvim-lspconfig'
+Plug 'jacoborus/tender.vim'
 call plug#end()
 
 syntax on
-let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox   
+" let g:gruvbox_contrast_dark = 'hard'
+" colorscheme gruvbox  
+set termguicolors
+colorscheme tender
+let g:airline_theme = 'tender'
+
 
 " Automatically open NERDTree when nvim opens
 autocmd VimEnter * NERDTree | wincmd p
