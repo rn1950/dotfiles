@@ -41,7 +41,6 @@ set termguicolors
 colorscheme tender
 let g:airline_theme = 'tender'
 
-
 " Automatically open NERDTree when nvim opens
 autocmd VimEnter * NERDTree | wincmd p
 
@@ -77,16 +76,19 @@ set expandtab     " <Tab> inserts spaces, not '\t'
 
 " Update time faster (default is 4000ms)
 set updatetime=100
- 
- 
+
+
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  ignore_install = { "javascript" }, -- List of parsers to ignore installing
-  highlight = {
+ensure_installed = {"c", "cpp", "python"},
+ignore_install = { "javascript" }, -- List of parsers to ignore installing
+highlight = {
     enable = true,              -- false will disable the whole extension
     disable = { },  -- list of language that will be disabled
     additional_vim_regex_highlighting = false,
-  },
+},
+
 }
 EOF
+
+
